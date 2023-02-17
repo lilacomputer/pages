@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="hello.gif">
+  <title>lila.computer</title>
+  <style>
+    body {
+      background-color: #0000ff;
+      margin: 0;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      height: 100vh;
+    }
+
+    .smile {
+      display: none;
+    }
+
+
+  </style>
+  </head>
+
+  <body>
+    <div class = "flex">
+      <img class = "smile">
+    </div>
+  </body>
+
+  <script> 
+    let currentSmile = Math.floor(Math.random() * 12);
+    let image = document.querySelectorAll(".smile")[0];
+    image.setAttribute("src", "img/hello" + currentSmile + ".gif");
+    image.style.display = "inline";
+  </script>
+
+</html>
